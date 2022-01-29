@@ -1,4 +1,13 @@
 package jdbc;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.PrintStream;
+import java.io.PrintWriter;
+import java.io.Writer;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,13 +20,13 @@ import oracle.jdbc.OracleTypes;
 public class OracleCursor {
 
 	public static void main(String[] args) {
-		
-		Connection conn = null; 
-		
 		try {
+			Connection conn = null; 
+		 
 			 conn = DriverManager.getConnection(
 			        "jdbc:oracle:thin:@localhost:1521:xe", 
 			        "hr", "quLRYP22");
+			 
 			
 			CallableStatement callableStatement = 
 					conn.prepareCall("{call get_countries(?)}");
