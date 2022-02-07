@@ -17,11 +17,8 @@ public class SimpleSerializable {
 		//f.close();
 		
 		 //ObjectInputStream f = new ObjectInputStream(new FileInputStream("c:/users/fadyf/test"));		 
-		
-		 
-		 //DataObject x1 = (DataObject)f.readObject();
-		
-		Path x = FileSystems.getDefault().getPath("c:\\windows" , "..\\intel");
+	 
+		 //DataObject x1 = (DataObject)f.readObject(); 
 		
 		 
 
